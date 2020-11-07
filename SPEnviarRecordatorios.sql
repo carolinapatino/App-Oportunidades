@@ -7,5 +7,5 @@ WHERE Ac.ActividadId = A.TipoActividad AND A.Oportunidad = O.OportunidadId  AND 
 select top 1 with ties
    AccionId
 from Accion
-order by row_number() over (partition by Oportunidad order by AccionId desc)) AND A.AccionId = R.AccionId AND A.AsignadaA = 149
+order by row_number() over (partition by Oportunidad order by AccionId desc)) AND A.AccionId = R.AccionId AND A.FechaEjecucion >= SYSDATETIME()
 end

@@ -1,11 +1,5 @@
-USE [oportunidad_venta]
-GO
-/****** Object:  StoredProcedure [dbo].[EditarOportunidad]    Script Date: 16/9/2020 3:57:44 p.m. ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-ALTER PROC [dbo].[EditarOportunidad] (@jsonOportunidad NVARCHAR(max), @OportunidadId INT, @jsonAccionEnCurso NVARCHAR(max),  @jsonProximaAccion NVARCHAR(max), @jsonProductos NVARCHAR(max))
+
+CREATE PROC [dbo].[EditarOportunidad] (@jsonOportunidad NVARCHAR(max), @OportunidadId INT, @jsonAccionEnCurso NVARCHAR(max),  @jsonProximaAccion NVARCHAR(max), @jsonProductos NVARCHAR(max))
  as 
   begin 
 
