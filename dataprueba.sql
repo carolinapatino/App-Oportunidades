@@ -1,7 +1,7 @@
 ------ #01
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,NombreCliente, IdCreador, IdVendedor,Origen)
-VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'45523','HENRRY JOEL DIAZ PRUEBA',149,123,2);
+VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'45523','HENRRY JOEL DIAZ PRUEBA',10,123,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (1,22);
 
@@ -27,7 +27,7 @@ VALUES ('2020-09-04',3,0,3,'213123212','acción asignada a un vendedor',1,25);
 ------ #02 
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'18476',149,'LATINOAMERICANA DE INGENIERIA Y PROYECTOS,C.A.',135,2);
+VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'18476',9,'LATINOAMERICANA DE INGENIERIA Y PROYECTOS,C.A.',135,2);
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (2,3);
 
 --5
@@ -51,7 +51,7 @@ VALUES ('2020-09-04',7,0,3,'213123212','acción asignada a un vendedor',2,27);
 ------ #03 
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'21510',149,'LAURA CAROLINA CASTELLANOS CRUZ',127,2);
+VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'21510',7,'LAURA CAROLINA CASTELLANOS CRUZ',127,2);
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (3,15);
 
 --9
@@ -74,7 +74,7 @@ VALUES ('2020-09-04',11,0,3,'213123212','acción asignada a un aliado',3,89);
 ------------ #04
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'25637',149,'LAURIBEL OTERO AMARAL',26,2);
+VALUES ('2020-09-01','data Prueba creador por un promotor',0,1,'25637',156,'LAURIBEL OTERO AMARAL',136,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (4,22);
 
@@ -98,7 +98,7 @@ VALUES ('2020-09-04',15,0,3,'213123212','acción asignada a un aliado',4,64);
 ------------ #05
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'20367',53,'Laura Alicia Chebi Linares',123,2);
+VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'20367',190,'Laura Alicia Chebi Linares',123,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (5,3);
 
@@ -123,7 +123,7 @@ VALUES ('2020-09-06',19,0,3,'213123212','acción asignada a un vendedor',5,25);
 ------------ #06
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'17790',53,'LAURA DA PAZ CORREIA DO ROSARIO',135,2);
+VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'17790',27,'LAURA DA PAZ CORREIA DO ROSARIO',135,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (6,15);
 
@@ -147,7 +147,7 @@ VALUES ('2020-09-06',23,0,3,'213123212','acción asignada a un vendedor',6, 27);
 ------ #07
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'26389',53,'LAUNDRY OF TRUCKS EL GAVILAN C.A.',127,2);
+VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'26389',131,'LAUNDRY OF TRUCKS EL GAVILAN C.A.',127,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (7,22);
 
@@ -171,7 +171,7 @@ VALUES ('2020-09-06',27,0,3,'213123212','acción asignada a un aliado',7,89);
 ------------ #08
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'24481',53,'ASOCIACION VENEZOLANA DE TURISMO PARA LA SALUD',26,2);
+VALUES ('2020-09-02','data Prueba creador por un promotor',0,1,'24481',133,'ASOCIACION VENEZOLANA DE TURISMO PARA LA SALUD',26,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (8,3);
 
@@ -196,7 +196,7 @@ VALUES ('2020-09-06',31,0,3,'213123212','acción asignada a un aliado',8,64);
 ------------ #09
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'21217',149,'LATONERIA Y PINTURA APACHE C.A',123,2);
+VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'21217',133,'LATONERIA Y PINTURA APACHE C.A',123,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (9,15);
 
@@ -221,7 +221,7 @@ VALUES ('2020-09-09',35,0,3,'213123212','acción asignada a un vendedor',9,25);
 --------- #10
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'22704',149,'ANA LUISA NARANJO MEJIAS',135,2);
+VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'22704',43,'ANA LUISA NARANJO MEJIAS',135,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (10,22);
 
@@ -246,7 +246,7 @@ VALUES ('2020-09-09',39,0,3,'213123212','acción asignada a un vendedor',10, 27)
 --------- #11
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'21381',149,'ANA LUISA GONZALEZ DELGADO',127,2);
+VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'21381',8,'ANA LUISA GONZALEZ DELGADO',127,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (11,3);
 
@@ -272,7 +272,7 @@ VALUES ('2020-09-09',43,0,3,'213123212','acción asignada a un aliado', 11, 89);
 --------- #12
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'05022',149,'ASOCIACION DE IND.DE PANADERIAS',26,2);
+VALUES ('2020-09-06','data Prueba creador por un promotor',0,1,'05022',14,'ASOCIACION DE IND.DE PANADERIAS',26,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (12,15);
 
@@ -419,7 +419,7 @@ VALUES ('2020-09-14',65,0,3,'213123212','acción asignada a un vendedor', 17, 25
 
 INSERT INTO OportunidadDeVenta 
 (FechaCreacion,Objetivo,MontoPresupuesto,Estatus,CodigoCliente,IdCreador, NombreCliente, IdVendedor,Origen)
-VALUES ('2020-09-11','data Prueba creador por un promotor',0,3,'18811',149,'AIRE CONFORT INDISTRIAL 89705, CA.',135,2);
+VALUES ('2020-09-11','data Prueba creador por un promotor',0,3,'18811',27,'AIRE CONFORT INDISTRIAL 89705, CA.',135,2);
 
 INSERT INTO ProductoOportunidad (NroOportunidad, ProductoId) VALUES (18,22);
 

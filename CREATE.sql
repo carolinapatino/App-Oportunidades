@@ -45,8 +45,14 @@ CREATE TABLE ProductoOportunidad(
     ProductoOportunidadId INT NOT NULL IDENTITY PRIMARY KEY,
     NroOportunidad INT NOT NULL,
     ProductoId INT NOT NULL, 
+    CONSTRAINT FK_ProductoOportunidad_Producto_ProductoId FOREIGN KEY (ProductoId) REFERENCES Producto(ProductoId);
     CONSTRAINT FK_ProductoOportunidad_Oportunidad_OportunidadId FOREIGN KEY (NroOportunidad) REFERENCES OportunidadDeVenta (OportunidadId)
 );
+
+CREATE TABLE Producto (
+    ProductoId INT PRIMARY KEY, 
+    NombreProducto VARCHAR(50) NOT NULL
+)
 
 CREATE TABLE Accion(
     AccionId INT NOT NULL IDENTITY PRIMARY KEY,
@@ -90,7 +96,7 @@ CREATE TABLE Usuario (
 CREATE TABLE Permiso(
     PermisoId INT NOT NULL IDENTITY PRIMARY KEY,
     NombrePermiso VARCHAR(50) NOT NULL,
-    Descripcion VARCHAR(100)
+    Descripcion VARCHAR(100),
 );
 
 CREATE TABLE PermisoUsuario (
@@ -103,7 +109,9 @@ CREATE TABLE PermisoUsuario (
 
 CREATE TABLE Equipo (
     EquipoId INT NOT NULL IDENTITY PRIMARY KEY, 
-    NombreEquipo VARCHAR(100) NOT NULL
+    NombreEquipo VARCHAR(100) NOT NULL, 
+    PermisoParaAcceder INT,
+    CONSTRAINT FK_PermisoEquipo_Equipo_PermisoId FOREIGN KEY (PermisoParaAcceder) REFERENCES Permiso (PermisoId)
 );
 
 CREATE TABLE UsuarioEquipo (

@@ -1,0 +1,10 @@
+1. Crear Producto 
+CREATE TABLE Producto (
+    ProductoId INT PRIMARY KEY, 
+    NombreProducto VARCHAR(50) NOT NULL
+)
+
+
+ALTER TABLE Producto
+ADD CONSTRAINT FK_ProductoOportunidad_Producto_Produc
+
