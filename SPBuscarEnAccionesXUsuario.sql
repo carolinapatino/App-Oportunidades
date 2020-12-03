@@ -1,4 +1,4 @@
-CREATE PROC BuscarAccionesXUsuario (@IDUsuario INT, @CampoBusqueda VARCHAR(20))
+CREATE PROC BuscarAccionesXUsuario (@IDUsuario INT, @CampoBusqueda VARCHAR(30))
 AS 
 BEGIN 
 
