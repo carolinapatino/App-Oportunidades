@@ -1,5 +1,0 @@
-CREATE PROC EliminarAccion (@AccionId INT)
-AS 
-BEGIN 
-DELETE FROM ACCION WHERE AccionId = @AccionId
-END

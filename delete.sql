@@ -1,4 +1,0 @@
-DBCC CHECKIDENT (Recordatorio, RESEED, 0);
-DBCC CHECKIDENT (Accion, RESEED, 0);
-DBCC CHECKIDENT (ProductoOportunidad, RESEED, 0);
-DBCC CHECKIDENT (OportunidadDeVenta, RESEED, 0);
