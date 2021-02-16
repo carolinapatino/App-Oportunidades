@@ -4,7 +4,7 @@ BEGIN
 SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre,
 		A.OrigenNombre, E.NombreEstatus,
 		O.CodigoCliente,O.NombreCliente, O.IdCreador, U.Nombre As NombreCreador, 
-		O.IdVendedor, V.Nombre AS NombreVendedor, STRING_AGG (Pr.ProductoId, ',') AS ProductosId, STRING_AGG (Pr.NombreProducto, ',') AS Productos,
+		O.IdVendedor, V.Nombre AS NombreVendedor, STRING_AGG (Pr.ProductoId, ',') AS Productos, STRING_AGG (Pr.NombreProducto, ',') AS ProductosNombre,
 		O.idUsuarioCerrador, C.Nombre As NombreCerrador, O.FechaReapertura
 
 FROM    OportunidadDeVenta O
