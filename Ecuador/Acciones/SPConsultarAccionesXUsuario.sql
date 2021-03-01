@@ -1,10 +1,11 @@
-CREATE PROC [dbo].[ConsultarAccionesXUsuario] (@IDUsuario INT)
+ALTER PROC [dbo].[ConsultarAccionesXUsuario] (@IDUsuario INT)
 AS 
 BEGIN 
-SELECT  A.AccionId, A.FechaEjecucion, A.AccionAnterior, AC.NombreActividad,A.DatoEspecifico, A.Descripcion,A.Oportunidad, A.AsignadaA, A.PersonaContacto
+SELECT  A.AccionId, A.FechaEjecucion, A.AccionAnterior, AC.NombreActividad,A.DatoEspecifico, A.Descripcion,A.Oportunidad, A.AsignadaA, A.PersonaContacto, C.NombreCliente
 FROM	Accion A
 		INNER JOIN Actividad Ac ON Ac.ActividadId = A.TipoActividad
 		INNER JOIN OportunidadDeVenta O ON O.OportunidadId = A.Oportunidad
+		INNER JOIN Cliente C ON C.CodigoCliente = O.CodigoCliente
  
 WHERE	A.AsignadaA = @IDUsuario 
 		AND O.Estatus = 1 

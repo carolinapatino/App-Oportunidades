@@ -1,4 +1,5 @@
-CREATE PROC [dbo].[insertarAcciones] (@accionEnCurso NVARCHAR(500), @proximaAccion NVARCHAR(500), @OportunidadId INT)
+
+ALTER PROC [dbo].[insertarAcciones] (@accionEnCurso NVARCHAR(500), @proximaAccion NVARCHAR(500), @OportunidadId INT)
 as 
 begin 
  IF EXISTS( SELECT * FROM Accion  WHERE Oportunidad = @OportunidadId)

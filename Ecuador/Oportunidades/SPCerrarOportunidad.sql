@@ -1,4 +1,4 @@
-CREATE PROC [dbo].[CerrarOportunidad](@jsonCierre NVARCHAR(500), @OportunidadId INT)
+ALTER PROC [dbo].[CerrarOportunidad](@jsonCierre NVARCHAR(500), @OportunidadId INT)
  as 
  begin 
   WITH JSONCierre as(
@@ -25,6 +25,7 @@ CREATE PROC [dbo].[CerrarOportunidad](@jsonCierre NVARCHAR(500), @OportunidadId 
   FechaReapertura = c.FechaReapertura
   FROM JSONCierre c
   WHERE OportunidadId = @OportunidadId 
- end
 
- 
+  exec ConsultarOportunidadXID @OportunidadId
+
+ end

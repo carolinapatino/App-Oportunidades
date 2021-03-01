@@ -1,8 +1,8 @@
-CREATE PROC [dbo].[ConsultarOportunidadXID] (@OportunidadId INT)
+ALTER PROC [dbo].[ConsultarOportunidadXID] (@OportunidadId INT)
 AS 
 BEGIN 
 SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre,
-		A.OrigenNombre, E.NombreEstatus, C.NombreCliente,
+		A.OrigenNombre, E.NombreEstatus, C.NombreCliente, O.CodigoCliente,
 		O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.fechaReapertura, STRING_AGG (P.ProductoId, ',') AS Productos
 FROM	OportunidadDeVenta O 
 		INNER JOIN Estatus E ON O.Estatus = E.EstatusId
@@ -14,5 +14,5 @@ FROM	OportunidadDeVenta O
  WHERE	O.OportunidadId = @OportunidadId
 	
 GROUP BY PO.NroOportunidad, O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
-C.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.fechaReapertura
+C.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.fechaReapertura, O.CodigoCliente
 END 

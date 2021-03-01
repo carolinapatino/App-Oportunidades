@@ -1,4 +1,4 @@
-CREATE PROC [dbo].[EditarOportunidad] (@jsonOportunidad NVARCHAR(500), @OportunidadId INT, @jsonAccionEnCurso NVARCHAR(500),  @jsonProximaAccion NVARCHAR(500), @jsonProductos NVARCHAR(500))
+ALTER PROC [dbo].[EditarOportunidad] (@jsonOportunidad NVARCHAR(500), @OportunidadId INT, @jsonAccionEnCurso NVARCHAR(500),  @jsonProximaAccion NVARCHAR(500), @jsonProductos NVARCHAR(500))
  as 
   begin 
  
@@ -96,4 +96,8 @@ CREATE PROC [dbo].[EditarOportunidad] (@jsonOportunidad NVARCHAR(500), @Oportuni
 
 
 exec CrearRecordatorio @UltimaAccion
+
+exec ConsultarOportunidadXID @OportunidadId
+
+
  end

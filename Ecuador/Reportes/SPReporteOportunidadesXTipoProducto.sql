@@ -1,32 +1,58 @@
-CREATE PROC [dbo].[ReporteOportunidadesXTipoProducto] (@tipoProducto INT, @aPartirDe DATE)
- AS 
- BEGIN 
+ALTER PROC [dbo].[ReporteOportunidadesXTipoProducto] (@tipoProducto INT, @aPartirDe DATE)
+AS 
+BEGIN 
  IF @TipoProducto = 1 
  BEGIN
- SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, STRING_AGG (P.ProductoId, ',') AS Productos, O.idUsuarioCerrador , O.FechaReapertura
- FROM OportunidadDeVenta O, Estatus E, Origen A, ProductoOportunidad P, Producto Pr
- WHERE  E.EstatusId = O.Estatus 
-		AND O.Origen = A.OrigenId 
-		AND P.NroOportunidad = O.OportunidadId 
-		AND Pr.ProductoId = P.ProductoId 
+SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre,
+		A.OrigenNombre, E.NombreEstatus,
+		O.CodigoCliente,Cl.NombreCliente, O.IdCreador, U.Nombre As NombreCreador, 
+		O.IdVendedor, V.Nombre AS NombreVendedor, STRING_AGG (Pr.ProductoId, ',') AS Productos, STRING_AGG (Pr.NombreProducto, ',') AS ProductosNombre,
+		O.idUsuarioCerrador, C.Nombre As NombreCerrador, O.FechaReapertura
+
+FROM    OportunidadDeVenta O
+		INNER JOIN Estatus E ON E.EstatusId = O.Estatus
+		INNER JOIN Origen A ON A.OrigenId = O.Origen
+		INNER JOIN ProductoOportunidad P ON P.NroOportunidad = O.OportunidadId
+		INNER JOIN Producto Pr ON Pr.ProductoId = P.ProductoId
+		INNER JOIN Usuario U ON U.UsuarioId = O.IdCreador
+		INNER JOIN Usuario V ON V.UsuarioId = O.IdVendedor 
+		LEFT OUTER JOIN Usuario C ON C.UsuarioId = O.idUsuarioCerrador
+		INNER JOIN Cliente Cl ON Cl.CodigoCliente = O.CodigoCliente
+
+ WHERE 
+		O.FechaCreacion >= @aPartirDe
+		AND V.RolId = 1
 		AND Pr.NombreProducto LIKE '%PAS' 
-		AND O.FechaCreacion >= @aPartirDe 
-GROUP BY P.NroOportunidad, O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.FechaReapertura
+
+GROUP BY O.OportunidadId,  P.NroOportunidad, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
+O.CodigoCliente,Cl.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.FechaReapertura, C.Nombre, U.Nombre, V.Nombre
+
 END 
 ELSE 
 BEGIN 
- SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, STRING_AGG (P.ProductoId, ',') AS Productos, O.idUsuarioCerrador, O.FechaReapertura
- FROM OportunidadDeVenta O, Estatus E, Origen A, ProductoOportunidad P, Producto Pr
- WHERE  E.EstatusId = O.Estatus 
-		AND O.Origen = A.OrigenId 
-		AND P.NroOportunidad = O.OportunidadId 
-		AND Pr.ProductoId = P.ProductoId 
+SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre,
+		A.OrigenNombre, E.NombreEstatus,
+		O.CodigoCliente,Cl.NombreCliente, O.IdCreador, U.Nombre As NombreCreador, 
+		O.IdVendedor, V.Nombre AS NombreVendedor, STRING_AGG (Pr.ProductoId, ',') AS Productos, STRING_AGG (Pr.NombreProducto, ',') AS ProductosNombre,
+		O.idUsuarioCerrador, C.Nombre As NombreCerrador, O.FechaReapertura
+
+FROM    OportunidadDeVenta O
+		INNER JOIN Estatus E ON E.EstatusId = O.Estatus
+		INNER JOIN Origen A ON A.OrigenId = O.Origen
+		INNER JOIN ProductoOportunidad P ON P.NroOportunidad = O.OportunidadId
+		INNER JOIN Producto Pr ON Pr.ProductoId = P.ProductoId
+		INNER JOIN Usuario U ON U.UsuarioId = O.IdCreador
+		INNER JOIN Usuario V ON V.UsuarioId = O.IdVendedor 
+		LEFT OUTER JOIN Usuario C ON C.UsuarioId = O.idUsuarioCerrador
+		INNER JOIN Cliente Cl ON Cl.CodigoCliente = O.CodigoCliente
+
+ WHERE 
+		O.FechaCreacion >= @aPartirDe
+		AND V.RolId = 1 
 		AND Pr.NombreProducto NOT LIKE '%PAS' 
-		AND O.FechaCreacion >= @aPartirDe 
-GROUP BY P.NroOportunidad, O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.FechaReapertura
-END 
-END 
+
+GROUP BY O.OportunidadId,  P.NroOportunidad, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
+O.CodigoCliente,Cl.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.FechaReapertura, C.Nombre, U.Nombre, V.Nombre
+
+END
+END

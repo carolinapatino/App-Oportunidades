@@ -1,36 +1,32 @@
-CREATE PROC [dbo].[ReporteOportunidadesXTipoProductoVend] (@tipoProducto INT, @aPartirDe DATE, @idCreador INT, @idVendedor INT)
- AS 
- BEGIN
- IF @TipoProducto = 1 
- BEGIN
- SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, STRING_AGG (P.ProductoId, ',') AS Productos , O.FechaReapertura
- FROM OportunidadDeVenta O, Estatus E, Origen A, ProductoOportunidad P, Producto Pr
- WHERE  E.EstatusId = O.Estatus 
-		AND O.Origen = A.OrigenId 
-		AND P.NroOportunidad = O.OportunidadId 
-		AND Pr.ProductoId = P.ProductoId 
-		AND Pr.NombreProducto LIKE '%PAS' 
-		AND O.FechaCreacion >= @aPartirDe 
-		AND (O.IdCreador = @idCreador
-		AND O.IdVendedor = @idVendedor)
-GROUP BY P.NroOportunidad, O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, O.FechaReapertura
-END 
-ELSE 
-BEGIN 
- SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, STRING_AGG (P.ProductoId, ',') AS Productos, O.FechaReapertura
- FROM OportunidadDeVenta O, Estatus E, Origen A, ProductoOportunidad P, Producto Pr
- WHERE  E.EstatusId = O.Estatus 
-		AND O.Origen = A.OrigenId 
-		AND P.NroOportunidad = O.OportunidadId 
-		AND Pr.ProductoId = P.ProductoId 
-		AND Pr.NombreProducto NOT LIKE '%PAS' 
-		AND O.FechaCreacion >= @aPartirDe 
-		AND (O.IdCreador = @idCreador
-		OR O.IdVendedor = @idVendedor)
-GROUP BY P.NroOportunidad, O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
- O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, O.FechaReapertura
-END 
-END 
+ALTER PROC [dbo].[ReporteXEquipo] (@EquipoId INT, @Fecha DATE)
+AS 
+BEGIN
+SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre,
+		A.OrigenNombre, E.NombreEstatus,
+		O.CodigoCliente,Cl.NombreCliente, O.IdCreador, U.Nombre As NombreCreador, 
+		O.IdVendedor, V.Nombre AS NombreVendedor, STRING_AGG (Pr.ProductoId, ',') AS Productos, STRING_AGG (Pr.NombreProducto, ',') AS ProductosNombre,
+		O.idUsuarioCerrador, C.Nombre As NombreCerrador, O.FechaReapertura
+
+FROM    OportunidadDeVenta O
+		INNER JOIN Estatus E ON E.EstatusId = O.Estatus
+		INNER JOIN Origen A ON A.OrigenId = O.Origen
+		INNER JOIN ProductoOportunidad P ON P.NroOportunidad = O.OportunidadId
+		INNER JOIN Producto Pr ON Pr.ProductoId = P.ProductoId
+		INNER JOIN Usuario U ON U.UsuarioId = O.IdCreador
+		INNER JOIN Usuario V ON V.UsuarioId = O.IdVendedor 
+		LEFT OUTER JOIN Usuario C ON C.UsuarioId = O.idUsuarioCerrador
+		INNER JOIN UsuarioEquipo Eq ON Eq.UsuarioId = O.IdCreador
+		INNER JOIN UsuarioEquipo UE ON UE.UsuarioId = V.UsuarioId
+		INNER JOIN Cliente Cl ON Cl.CodigoCliente = O.CodigoCliente
+
+ WHERE  
+		(O.FechaCreacion >= @Fecha OR O.FechaCierre >= @Fecha)
+		AND V.RolId = 1
+		AND (Eq.EquipoId = @EquipoId
+		OR UE.EquipoId = @EquipoId)
+
+
+GROUP BY O.OportunidadId,  P.NroOportunidad, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
+O.CodigoCliente,Cl.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.FechaReapertura, C.Nombre, U.Nombre, V.Nombre
+		
+END

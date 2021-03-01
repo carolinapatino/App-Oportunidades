@@ -1,7 +1,7 @@
-CREATE PROC BuscarClienteXCodigo (@CodigoCliente VARCHAR(5))
+ALTER PROC [dbo].[BuscarClienteXCodigo] (@CodigoCliente VARCHAR(10))
 AS 
 BEGIN 
-SELECT CodigoCliente,RUC,NombreCliente, Telefono, Correo, VendedorAsociado 
+SELECT *
 FROM CLIENTE
 WHERE CodigoCliente = @CodigoCliente
 END

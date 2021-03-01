@@ -1,10 +1,10 @@
-CREATE PROC [dbo].[OportunidadesAbiertasXCliente] (@CodigoCliente VARCHAR(10))
+ALTER PROC [dbo].[OportunidadesAbiertasXCliente] (@CodigoCliente VARCHAR(10))
  AS 
  BEGIN 
   IF EXISTS (Select * from OportunidadDeVenta where Estatus = 1 and CodigoCliente = @CodigoCliente)
 
  SELECT TOP 1 O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre,
-		A.OrigenNombre, E.NombreEstatus, C.NombreCliente,
+		A.OrigenNombre, E.NombreEstatus, C.NombreCliente, O.CodigoCliente,
 		O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.fechaReapertura, STRING_AGG (P.ProductoId, ',') AS Productos
 FROM	OportunidadDeVenta O 
 		INNER JOIN Estatus E ON O.Estatus = E.EstatusId
@@ -17,7 +17,7 @@ WHERE O.Estatus = 1
 	  AND O.CodigoCliente = @CodigoCliente
 	
 GROUP BY PO.NroOportunidad, O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
-C.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.fechaReapertura
+C.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.fechaReapertura, O.CodigoCliente
 
  ELSE
  SELECT OportunidadId = 0

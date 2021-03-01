@@ -1,13 +1,15 @@
-CREATE PROC [dbo].[ReporteAccionesXCliente] (@CodigoCliente VARCHAR(10), @Fecha DATE)
+ALTER PROC [dbo].[ReporteAccionesXCliente] (@CodigoCliente VARCHAR(10), @Fecha DATE)
  as 
   begin 
- 
-SELECT  A.AccionId, A.FechaEjecucion, A.AccionAnterior, AC.NombreActividad,A.DatoEspecifico, A.Descripcion,A.Oportunidad, A.AsignadaA, A.PersonaContacto
-FROM	Accion A
+  SELECT A.FechaEjecucion, A.DatoEspecifico, A.Descripcion, A.Oportunidad, U.Nombre AS AsignadaA, 
+		Ac.NombreActividad, C.NombreCliente, A.PersonaContacto, R.Nombre AS RegistradaPor
+  FROM	Accion A 
+		INNER JOIN OportunidadDeVenta O ON A.Oportunidad = O.OportunidadId
 		INNER JOIN Actividad Ac ON Ac.ActividadId = A.TipoActividad
-		INNER JOIN OportunidadDeVenta O ON O.OportunidadId = A.Oportunidad
- 
-WHERE	O.CodigoCliente = @CodigoCliente 
+		INNER JOIN Usuario U ON A.AsignadaA = U.UsuarioId
+		LEFT OUTER JOIN Usuario R ON R.UsuarioId = A.RegistradaPor
+		INNER JOIN Cliente C ON C.CodigoCliente = O.CodigoCliente
+  WHERE 
+		O.CodigoCliente = @CodigoCliente
 		AND A.FechaEjecucion >= @Fecha
-		
  end

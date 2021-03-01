@@ -1,4 +1,4 @@
-CREATE PROC ConsultarCorreos (@IdCreador INT, @IdVendedor INT, @IdCerrador INT)
+ALTER PROC [dbo].[ConsultarCorreos] (@IdCreador INT, @IdVendedor INT, @IdCerrador INT)
 AS 
 BEGIN 
 SELECT U.Correo 

@@ -33,12 +33,13 @@ CREATE TABLE Usuario (
 
 CREATE TABLE Cliente(
     ClienteId INT NOT NULL IDENTITY PRIMARY KEY,
-    CodigoCliente VARCHAR(10) NOT NULL UNIQUE,
-    RUC VARCHAR (15) NOT NULL UNIQUE,
+    CodigoCliente INT DEFAULT NEXT VALUE FOR SequenceCliente UNIQUE,
+    RUC VARCHAR (15) NOT NULL,
     NombreCliente VARCHAR (200) NOT NULL,
-    Telefono VARCHAR (20) NOT NULL,
-    Correo VARCHAR (100) NOT NULL UNIQUE,
-    VendedorAsociado INT NOT NULL,
+    Telefono VARCHAR (40),
+    Correo VARCHAR (100),
+    PersonaContacto VARCHAR (100), 
+    VendedorAsociado INT,
 
     CONSTRAINT FK_Cliente_VendedorAsociado_UsuarioId FOREIGN KEY (VendedorAsociado) REFERENCES Usuario(UsuarioId)
 );
@@ -56,7 +57,7 @@ CREATE TABLE OportunidadDeVenta(
     Origen INT NOT NULL,
     IdUsuarioCerrador  INT, 
     FechaReapertura DATE,
-    CodigoCliente VARCHAR(10) NOT NULL
+    CodigoCliente INT NOT NULL
     CONSTRAINT FK_OportunidadDeVenta_Estatus_EstatusId FOREIGN KEY (Estatus) REFERENCES Estatus (EstatusId),
     CONSTRAINT FK_OportunidadDeVenta_Origen_OrigenId FOREIGN KEY (Origen) REFERENCES Origen (OrigenId),
     CONSTRAINT FK_OportunidadDeVenta_CodigoCliente_CodigoCliente FOREIGN KEY (CodigoCliente) REFERENCES Cliente (CodigoCliente),
