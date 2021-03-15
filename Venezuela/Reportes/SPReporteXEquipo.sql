@@ -17,7 +17,7 @@ FROM    OportunidadDeVenta O
 		INNER JOIN Usuario V ON V.VendedorId = O.IdVendedor 
 		LEFT OUTER JOIN Usuario C ON C.UsuarioId = O.idUsuarioCerrador
 		INNER JOIN UsuarioEquipo Eq ON Eq.UsuarioId = O.IdCreador
-		INNER JOIN UsuarioEquipo UE ON UE.UsuarioId = V.UsuarioId
+		LEFT OUTER JOIN UsuarioEquipo UE ON UE.UsuarioId = V.UsuarioId
 
  WHERE  
 		(O.FechaCreacion >= @Fecha OR O.FechaCierre >= @Fecha)
