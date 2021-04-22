@@ -1,0 +1,280 @@
+[
+  {
+    "AccionId": 10402,
+    "FechaEjecucion": "2021-04-19T00:00:00",
+    "AccionAnterior": 10401,
+    "DatoEspecifico": null,
+    "Descripcion": "Se envia cotización junto con datos bancarios ",
+    "Oportunidad": 3255,
+    "AsignadaA": 9,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "Vincenza Melillo  "
+  },
+  {
+    "AccionId": 10401,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "0212-2388498 / 04166107024",
+    "Descripcion": "NAXIL.F.EMP Producto nuevo ",
+    "Oportunidad": 3255,
+    "AsignadaA": 9,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": "Vincenza Melillo  "
+  },
+  {
+    "AccionId": 10306,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": 10243,
+    "DatoEspecifico": null,
+    "Descripcion": "ESPERANDO LA APROBACIÓN",
+    "Oportunidad": 3201,
+    "AsignadaA": 64,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "MONICA"
+  },
+  {
+    "AccionId": 10243,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": 10204,
+    "DatoEspecifico": "",
+    "Descripcion": "Me comuniqué con la Sra Monica confirmó la recepción de la cotización y quedó en avisarme cuando tengan la disponibilidad para realizar el Pago",
+    "Oportunidad": 3201,
+    "AsignadaA": 64,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 10204,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": 10199,
+    "DatoEspecifico": "",
+    "Descripcion": "realizar 2do contacto al cliente  ",
+    "Oportunidad": 3201,
+    "AsignadaA": 64,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 10199,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": 10198,
+    "DatoEspecifico": "0424-8754386 - 0281-2667744",
+    "Descripcion": "realizar seguimiento para concretar la venta",
+    "Oportunidad": 3201,
+    "AsignadaA": 11,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 10198,
+    "FechaEjecucion": "2021-04-13T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "P21IT-090496",
+    "Descripcion": "cotizacion por SAW PYME",
+    "Oportunidad": 3201,
+    "AsignadaA": 153,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 10488,
+    "FechaEjecucion": "2021-04-16T00:00:00",
+    "AccionAnterior": 10487,
+    "DatoEspecifico": "(0426)575-45-64",
+    "Descripcion": "",
+    "Oportunidad": 3278,
+    "AsignadaA": 71,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 10487,
+    "FechaEjecucion": "2021-04-16T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": null,
+    "Descripcion": "Cot nunero 89509",
+    "Oportunidad": 3278,
+    "AsignadaA": 71,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": ""
+  },
+  
+  {
+    "AccionId": 9439,
+    "FechaEjecucion": "2021-04-07T00:00:00",
+    "AccionAnterior": 8866,
+    "DatoEspecifico": "P21SA-089754",
+    "Descripcion": "Se envia cotización junto con datos bancarios ",
+    "Oportunidad": 2847,
+    "AsignadaA": 9,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 8866,
+    "FechaEjecucion": "2021-03-24T00:00:00",
+    "AccionAnterior": 8865,
+    "DatoEspecifico": "(0285)632-58-72",
+    "Descripcion": "",
+    "Oportunidad": 2847,
+    "AsignadaA": 65,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 8865,
+    "FechaEjecucion": "2021-03-24T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "P21JT-089073",
+    "Descripcion": "Se le realizo una cotizacion",
+    "Oportunidad": 2847,
+    "AsignadaA": 65,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "Serviconta 262, C.A"
+  },
+
+  {
+    "AccionId": 10481,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": 10480,
+    "DatoEspecifico": "(0285)632-93-35",
+    "Descripcion": "",
+    "Oportunidad": 3276,
+    "AsignadaA": 65,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 10480,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "(0285)632-93-35",
+    "Descripcion": "sE LE REALIZO COTIZACION",
+    "Oportunidad": 3276,
+    "AsignadaA": 65,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": "Carolina"
+  },
+  {
+    "AccionId": 10536,
+    "FechaEjecucion": "2021-04-16T00:00:00",
+    "AccionAnterior": 10535,
+    "DatoEspecifico": null,
+    "Descripcion": "",
+    "Oportunidad": 3293,
+    "AsignadaA": 90,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "WLADIMIR CHACON PAREDES"
+  },
+  {
+    "AccionId": 10535,
+    "FechaEjecucion": "2021-04-16T00:00:00",
+    "AccionAnterior": 10534,
+    "DatoEspecifico": "(0414)424-79-25",
+    "Descripcion": "Se procesa la cotizacion para facturar",
+    "Oportunidad": 3293,
+    "AsignadaA": 90,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": "WLADIMIR CHACON PAREDES"
+  },
+  {
+    "AccionId": 10534,
+    "FechaEjecucion": "2021-04-16T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "P21MS-090348",
+    "Descripcion": "Cotizacion para renovacion de poliza",
+    "Oportunidad": 3293,
+    "AsignadaA": 13,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "WLADIMIR CHACON PAREDES"
+  },
+  {
+    "AccionId": 9892,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": 9891,
+    "DatoEspecifico": null,
+    "Descripcion": "SE COTIZA SEGÚN COTIZACIÓN CLIENTE",
+    "Oportunidad": 3127,
+    "AsignadaA": 140,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "JUAN CARLOS"
+  },
+  {
+    "AccionId": 9891,
+    "FechaEjecucion": "2021-04-08T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "(0244)334-29-45",
+    "Descripcion": "SE HACE CONTACTO CON EL CLENTE Y SE LE INDICA TODAS LAS BONDADES DE LOS PROGRAMAS GALAC",
+    "Oportunidad": 3127,
+    "AsignadaA": 140,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": "JUAN CARLOS"
+  },
+  {
+    "AccionId": 10537,
+    "FechaEjecucion": "2021-04-23T00:00:00",
+    "AccionAnterior": 9892,
+    "DatoEspecifico": "P21AF-090830",
+    "Descripcion": "SE ACTUALIZA COTIZACIÓN A CLIENTE",
+    "Oportunidad": 3127,
+    "AsignadaA": 140,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "JUAN CARLOS"
+  },
+  {
+    "AccionId": 9892,
+    "FechaEjecucion": "2021-04-15T00:00:00",
+    "AccionAnterior": 9891,
+    "DatoEspecifico": "",
+    "Descripcion": "SE COTIZA SEGÚN COTIZACIÓN CLIENTE",
+    "Oportunidad": 3127,
+    "AsignadaA": 140,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": "JUAN CARLOS"
+  },
+  {
+    "AccionId": 9891,
+    "FechaEjecucion": "2021-04-08T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "(0244)334-29-45",
+    "Descripcion": "SE HACE CONTACTO CON EL CLENTE Y SE LE INDICA TODAS LAS BONDADES DE LOS PROGRAMAS GALAC",
+    "Oportunidad": 3127,
+    "AsignadaA": 140,
+    "NombreActividad": "Llamada",
+    "PersonaContacto": "JUAN CARLOS"
+  },
+  {
+    "AccionId": 9973,
+    "FechaEjecucion": "2021-04-12T00:00:00",
+    "AccionAnterior": 9879,
+    "DatoEspecifico": null,
+    "Descripcion": "se pudo comunicar con el cliente indico que el dia de hoy realizara el pago o mas tardar el lunes ",
+    "Oportunidad": 3124,
+    "AsignadaA": 82,
+    "NombreActividad": "Cotización",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 9879,
+    "FechaEjecucion": "2021-04-08T00:00:00",
+    "AccionAnterior": 9878,
+    "DatoEspecifico": "amcontadores2014@gmail.com",
+    "Descripcion": "Se envia otro correo solicitandole un nuemro donde podernos comunicar con ellos ",
+    "Oportunidad": 3124,
+    "AsignadaA": 82,
+    "NombreActividad": "Email",
+    "PersonaContacto": ""
+  },
+  {
+    "AccionId": 9878,
+    "FechaEjecucion": "2021-04-08T00:00:00",
+    "AccionAnterior": null,
+    "DatoEspecifico": "amcontadores2014@gmail.com",
+    "Descripcion": "Se envio cotizacion por renovación de poliza Iva",
+    "Oportunidad": 3124,
+    "AsignadaA": 82,
+    "NombreActividad": "Email",
+    "PersonaContacto": ""
+  }
+
+

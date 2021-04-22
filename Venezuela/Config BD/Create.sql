@@ -91,8 +91,8 @@ CREATE TABLE Usuario (
     UsuarioId INT NOT NULL  PRIMARY KEY, 
     Nombre VARCHAR(100) NOT NULL, 
     Correo VARCHAR(100) NOT NULL UNIQUE,
-    VendedorId INT UNIQUE,
-    RolId INT NOT NULL
+    VendedorId INT,
+    RolId INT NOT NULL,
     CONSTRAINT FK_UsuarioRol_Rol_Id FOREIGN KEY (RolId) REFERENCES Rol (RolId) 
 );
 
