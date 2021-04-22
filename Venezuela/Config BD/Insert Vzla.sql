@@ -117,7 +117,6 @@ INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (69, 'Laura
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (115, 'Lelia Perez', 'lelia.perez.epocave@gmail.com',151, 11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (68, 'Gerardo Perez', 'gerardo.epoca@gmail.com', 11, 7);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (118, 'Laura Perez (Aragua)', 'laura.perez.rechner@gmail.com',151, 7);
-INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (139, 'Ana Ferrer', 'ana.ferro.rechner@gmail.com',11, 11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (139, 'Ana Ferrer', 'ana.ferro.rechner@gmail.com',151, 11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (116, 'Maria Orellana', 'malejandra.orellana.epocave@gmail.com', 151, 11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (117, 'Anderson Castro', 'anderson.castro.epocave@gmail.com',151,11);
@@ -182,6 +181,10 @@ INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (102, 'Dario Zapata - O
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (67, 'Dario Zapata - Operador 1', 'sysordaz@gmail.com', 53,7 );
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (148, 'Irvin Cedeño', 'irvincedenoyasociados@gmail.com',194,7 );
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (127, 'Gilberto Moreno', 'gilberthmoreno@gmail.com', 179,7 );
+INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (73, 'Gabriel Chacon (Barinas)', 'vainfogal1@gmail.com', 152,7 );
+INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (71, 'Gabriel Chacon (Táchira)', 'gainfogal1@gmail.com', 24,7 );
+INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (80, 'Antonio Zapata', 'serviciosexabyte@hotmail.com', 162,7 );
+
 
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (82,5);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (90,5);
@@ -191,6 +194,13 @@ INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (102,5);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (67,5);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (148,5);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (127,5);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (13,5);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (73,5);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (71,5);
+
+
+INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (93, 'José Quiñonez', 'aliadosucre@mq.com.ve', 139,7 );
+
 
 /* Otros Usuarios */ 
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (53,'Juan Garcia del Castillo', 'juan.garcia@galac.com', 9 );
@@ -207,3 +217,24 @@ INSERT PermisoUsuario (Permiso, Usuario) VALUES (4, 11);
 INSERT PermisoUsuario (Permiso, Usuario) VALUES (6, 11);
 INSERT PermisoUsuario (Permiso, Usuario) VALUES (7, 11);
 INSERT PermisoUsuario (Permiso, Usuario) VALUES (4, 6);
+
+
+/*Productos*/
+INSERT Producto (ProductoId,NombreProducto) VALUES (3,'AXI');
+INSERT Producto (ProductoId,NombreProducto) VALUES (3,'AXI-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'DER');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'DER-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (18,'NOM');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'NOM-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (5,'AXP');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'AXP-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (22,'SAW');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'SAW-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (21,'RET');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'RET-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (11,'CONT');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'CONT-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (,'IVA-PAS');
+INSERT Producto (ProductoId,NombreProducto) VALUES (15,'IVA');
+INSERT Producto (ProductoId,NombreProducto) VALUES (15,'OTRO');
+
