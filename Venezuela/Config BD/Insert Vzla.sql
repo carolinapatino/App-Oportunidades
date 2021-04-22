@@ -72,6 +72,7 @@ INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (152,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (151,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (153,1);
 
+
 /*Vendedores*/
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RoliD) VALUES (33,'Mariana Diaz', 'Mariana.Diaz@galac.com', 46, 3 );
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RoliD) VALUES (25,'Edison Cartes', 'Edison.cartes@galac.com',123, 6 );
@@ -116,9 +117,8 @@ INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (88, 'Oscar
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (69, 'Laura Perez', 'laura.perez.rechner@gmail.com',151, 7);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (115, 'Lelia Perez', 'lelia.perez.epocave@gmail.com',151, 11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (68, 'Gerardo Perez', 'gerardo.epoca@gmail.com', 11, 7);
-INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (118, 'Laura Perez (Aragua)', 'laura.perez.rechner@gmail.com',151, 7);
+--INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (118, 'Laura Perez (Aragua)', 'laura.perez.rechner@gmail.com',151, 7);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (139, 'Ana Ferrer', 'ana.ferro.rechner@gmail.com',11, 11);
-INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (139, 'Ana Ferrer', 'ana.ferro.rechner@gmail.com',151, 11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (116, 'Maria Orellana', 'malejandra.orellana.epocave@gmail.com', 151, 11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (117, 'Anderson Castro', 'anderson.castro.epocave@gmail.com',151,11);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (108, 'Maria Orellana', 'malejandra.orellana.rechner@gmail.com', 11,11);
@@ -147,6 +147,7 @@ INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (108,4);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (107,4);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (114,4);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (119,4);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (11,4);
 
 --Aliados - Gustavo
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (147, 'Yoleysi Olivares', 'yoleysi.olivares@galac.com', 8);
@@ -161,6 +162,7 @@ INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (86, 'Ivo C
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (72, 'Wilmer Osma', 'agt.tachira@gmail.com', 164, 7);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (94, 'Jonathan Lugo', 'jonathanlugo2@gmail.com', 174, 7);
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (75, 'CompuPower Operador 1', 'compupowerbarinas@hotmail.com', 172, 7);
+INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (83, 'Fernando Mota', 'mercadeo@sys-oriente.com', 142, 7);
 
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (78,6);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (64,6);
@@ -169,6 +171,9 @@ INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (86,6);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (72,6);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (94,6);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (75,6);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (22,6);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (83,6);
+
 
 --Aliados - Milagros 
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (13, 'Milagros Suarez', 'milagros.suarez@galac.com', 8 );
