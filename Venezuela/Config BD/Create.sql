@@ -47,14 +47,14 @@ CREATE TABLE ProductoOportunidad(
     ProductoOportunidadId INT NOT NULL IDENTITY PRIMARY KEY,
     NroOportunidad INT NOT NULL,
     ProductoId INT NOT NULL, 
-    CONSTRAINT FK_ProductoOportunidad_Producto_ProductoId FOREIGN KEY (ProductoId) REFERENCES Producto(ProductoId);
+    CONSTRAINT FK_ProductoOportunidad_Producto_ProductoId FOREIGN KEY (ProductoId) REFERENCES Producto(ProductoId),
     CONSTRAINT FK_ProductoOportunidad_Oportunidad_OportunidadId FOREIGN KEY (NroOportunidad) REFERENCES OportunidadDeVenta (OportunidadId)
 );
 
 CREATE TABLE Producto (
     ProductoId INT PRIMARY KEY, 
     NombreProducto VARCHAR(50) NOT NULL
-)
+);
 
 CREATE TABLE Accion(
     AccionId INT NOT NULL IDENTITY PRIMARY KEY,
@@ -68,7 +68,7 @@ CREATE TABLE Accion(
     Oportunidad INT NOT NULL,
     AsignadaA INT NOT NULL, 
     PersonaContacto VARCHAR (100),
-    RegistradaPor INT NOT NULL
+    RegistradaPor INT,
     CONSTRAINT FK_Accion_Accion_AccionId FOREIGN KEY (AccionAnterior) REFERENCES Accion (AccionId),
     CONSTRAINT FK_Accion_Actividad_ActividadId FOREIGN KEY (TipoActividad) REFERENCES Actividad (ActividadId) ,
     CONSTRAINT FK_Accion_Oportunidad_OportunidadId FOREIGN KEY (Oportunidad) REFERENCES OportunidadDeVenta (OportunidadId) 
