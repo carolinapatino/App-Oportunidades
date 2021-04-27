@@ -1,3 +1,28 @@
+If (atrasGbl <> true;
+Concurrent(
+UpdateContext({resetCampos:false});
+Set(menuVisible;false);
+If (DateDiff( Now(); horaInicioSesion; Minutes ) < -29 ; Set(returnLoginGbl;Login.Run(loginUsuario)))
+);;
+
+// Se cargan todos los datos de las oportunidades del sistema
+UpdateContext({cargandoLoc: true});;
+
+If (
+    IsBlankOrError(ClearCollect (misOportunidadesColl; ConsultarOportunidadesXUsuario.Run(First(usuarioActualColl).id; usuarioEsVendedor.vendedorId; BaseDeDatosAUtilizar))); 
+    Notify("Ha ocurrido un error. Revise su conexión e intente nuevamente"; NotificationType.Error; 5000);
+    UpdateContext({ordenLoc:false; ordernarPorLoc:"Fecha Creación"});;
+    If (IsBlank(misOportunidadesColl) = true; UpdateContext({sinOportunidadesLoc: true}))
+);;
+UpdateContext({cargandoLoc: false})
+);;
+Set (atrasGbl; false)
+
+
+
+
+
+
 [
   {
     "AccionId": 10402,
