@@ -19,7 +19,7 @@ FROM    OportunidadDeVenta O
  WHERE  E.EstatusId = @EstatusId
 		AND (O.FechaCreacion >= @Fecha OR O.FechaCierre >= @Fecha)
 		AND (V.RolId = 6 OR V.RolId = 7)
-		AND (O.IdCreador = @UsuarioId AND O.IdVendedor = @VendedorId) 
+		AND O.IdVendedor = @VendedorId
 
 GROUP BY O.OportunidadId,  P.NroOportunidad, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre, A.OrigenNombre, E.NombreEstatus,
 O.CodigoCliente,O.NombreCliente, O.IdCreador, O.IdVendedor, O.idUsuarioCerrador, O.FechaReapertura, C.Nombre, U.Nombre, V.Nombre

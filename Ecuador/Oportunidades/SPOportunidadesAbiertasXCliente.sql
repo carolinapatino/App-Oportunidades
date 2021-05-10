@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[OportunidadesAbiertasXCliente] (@CodigoCliente VARCHAR(10))
+CREATE PROC [dbo].[OportunidadesAbiertasXCliente] (@CodigoCliente VARCHAR(10))
  AS 
  BEGIN 
   IF EXISTS (Select * from OportunidadDeVenta where Estatus = 1 and CodigoCliente = @CodigoCliente)

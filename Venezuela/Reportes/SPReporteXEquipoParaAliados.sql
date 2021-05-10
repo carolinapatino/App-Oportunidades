@@ -1,4 +1,4 @@
-ALTER PROC ReporteXEquipoParaAliados (@Vendedor INT, @Fecha DATE) 
+CREATE  PROC ReporteXEquipoParaAliados (@Vendedor INT, @Fecha DATE) 
 AS 
 BEGIN 
 SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre,

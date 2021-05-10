@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[ReporteAccionesXCliente] (@CodigoCliente VARCHAR(10), @Fecha DATE)
+CREATE PROC [dbo].[ReporteAccionesXCliente] (@CodigoCliente VARCHAR(10), @Fecha DATE)
  as 
   begin 
   SELECT A.FechaEjecucion, A.DatoEspecifico, A.Descripcion, A.Oportunidad, U.Nombre AS AsignadaA, 

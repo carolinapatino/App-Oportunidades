@@ -1,5 +1,4 @@
-
-ALTER PROC [dbo].[BuscarCliente] (@NombreCliente VARCHAR(40))
+CREATE PROC [dbo].[BuscarCliente] (@NombreCliente VARCHAR(40))
 AS 
 BEGIN 
 SELECT *

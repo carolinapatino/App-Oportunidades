@@ -58,7 +58,8 @@ INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (8,'Hillary Rubio', 'H
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (14,'Alexander Silva', 'alexander.silva@galac.com', 2 );
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (152,'Enyerli Gonzalez', 'Enyerli.Gonzalez@galac.com', 4);
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (151,'Kenny Viñoles', 'Kenny.vinoles@galac.com', 4);
-INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (153, 'Ignacio Tinoco', 'Ignacio.Tinoco@galac.com', 4)
+INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (153, 'Ignacio Tinoco', 'Ignacio.Tinoco@galac.com', 4);
+INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (156,'Josue Gil', 'josue.gil@galac.com', 4 );
 
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (10,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (9,1);
@@ -71,6 +72,7 @@ INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (14,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (152,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (151,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (153,1);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (156,1);
 
 /*Vendedores*/
 INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RoliD) VALUES (33,'Mariana Diaz', 'Mariana.Diaz@galac.com', 46, 3 );
@@ -88,14 +90,14 @@ INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (21,3);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (33,3);
 
 /*Consultores*/
-INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (156, 'Carlos Montilla', 'carlos.montilla@galac.com', 5);
+INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (36, 'Carlos Montilla', 'carlos.montilla@galac.com', 5);
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (190,'Manuel Calderón', 'manuel.calderon@galac.com', 5 );
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (193,'Ruben Valera', 'ruben.valera@galac.com', 5 );
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (43,'Oscar Pariche', 'oscar.pariche@galac.com', 5 );
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId) VALUES (12,'Yetson Gonzalez', 'yetson.gonzalez@galac.com', 5 );
 
 
-INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (156,2);
+INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (36,2);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (190,2);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (193,2);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (43,2);
@@ -210,6 +212,7 @@ INSERT Usuario (UsuarioId, Nombre, Correo, VendedorId, RolId) VALUES (93, 'José
 /* Otros Usuarios */ 
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (53,'Juan Garcia del Castillo', 'juan.garcia@galac.com', 9 );
 INSERT Usuario (UsuarioId, Nombre, Correo, RolId ) VALUES (149,'Carolina Patiño', 'carolina.patino@galac.com', 10);
+INSERT Usuario (UsuarioId, Nombre, Correo, RolId, VendedorId ) VALUES (0, 'OFICINA', 'oficina@galac.com', 6, 7 )
 
 
 /*Permisos de usuario*/

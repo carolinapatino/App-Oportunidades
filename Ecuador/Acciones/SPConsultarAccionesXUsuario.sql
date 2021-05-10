@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[ConsultarAccionesXUsuario] (@IDUsuario INT)
+CREATE PROC [dbo].[ConsultarAccionesXUsuario] (@IDUsuario INT)
 AS 
 BEGIN 
 SELECT  A.AccionId, A.FechaEjecucion, A.AccionAnterior, AC.NombreActividad,A.DatoEspecifico, A.Descripcion,A.Oportunidad, A.AsignadaA, A.PersonaContacto, C.NombreCliente

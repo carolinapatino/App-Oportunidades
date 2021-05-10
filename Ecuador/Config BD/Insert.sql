@@ -17,13 +17,6 @@ INSERT INTO Origen (OrigenNombre) VALUES ('Referido');
 INSERT INTO Origen (OrigenNombre) VALUES ('Jornada de Cotización')
 
 
---Actividad 
-INSERT INTO Actividad (NombreActividad, FrecuenciaRecordatorio, DíasAntesRecordatorío) VALUES ('Llamada', 4, 2);
-INSERT INTO Actividad (NombreActividad, FrecuenciaRecordatorio, DíasAntesRecordatorio) VALUES ('Visita', 3, 1);
-INSERT INTO Actividad (NombreActividad, FrecuenciaRecordatorio, DíasAntesRecordatorio) VALUES ('Email', 1, 1);
-INSERT INTO Actividad (NombreActividad, FrecuenciaRecordatorio, DíasAntesRecordatorio) VALUES ('Cotizacion', 1, 1);
-INSERT INTO Actividad (NombreActividad, FrecuenciaRecordatorio, DíasAntesRecordatorio) VALUES ('Otra', 1, 1);
-
 --Productos
 INSERT INTO Producto (NombreProducto) VALUES ('Administrativo');
 INSERT INTO Producto (NombreProducto) VALUES ('Administrativo-PAS');
@@ -61,3 +54,4 @@ INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (1,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (2,1);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (3,2);
 INSERT UsuarioEquipo (UsuarioId, EquipoId) VALUES (4,2);
+

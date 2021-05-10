@@ -1,4 +1,4 @@
-ALTER  PROC [dbo].[OportunidadesAbiertasXUsuario] (@IDUsuario INT, @IDVendedor INT)
+CREATE PROC [dbo].[OportunidadesAbiertasXUsuario] (@IDUsuario INT, @IDVendedor INT)
 AS 
 BEGIN 
  SELECT COUNT(*)

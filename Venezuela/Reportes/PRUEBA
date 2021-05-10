@@ -1,0 +1,94 @@
+UpdateContext({resetCampos:false; cargandoLoc: true ; vacioMsg: true});;
+If(reportesDropdownRP.SelectedText.id = "O1";
+    If (CountRows(productosComboboxRP.SelectedItems) = 0 Or IsBlank(productosComboboxRP.SelectedItems);
+            Notify("Por favor indique un producto"; NotificationType.Error; 3000);
+            If (usuarioEsVendedor.vendedorId = 0;
+                ClearCollect(oportunidadesReportesColl; 
+                            ReporteOportunidadesXProducto.Run(Text (aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd"); 
+                                                            First(productosComboboxRP.SelectedItems).ProductoId; 
+                                                            BaseDeDatosAUtilizar)
+                );
+                ClearCollect(oportunidadesReportesColl; 
+                            ReportesOportunidadesXProductosVend.Run(Text (aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd"); 
+                                                                    First(productosComboboxRP.SelectedItems).ProductoId; 
+                                                                    First(usuarioActualColl).id ; 
+                                                                    usuarioEsVendedor.vendedorId; 
+                                                                    BaseDeDatosAUtilizar)
+                )
+            )
+    )
+);;
+
+
+If(reportesDropdownRP.SelectedText.id = "O2";
+    If (CountRows(equipoComboboxRP.SelectedItems) = 0 Or IsBlank(equipoComboboxRP.SelectedItems);
+            Notify("Por favor indique un equipo"; NotificationType.Error; 3000);
+            If (First(equipoComboboxRP.SelectedItems).EquipoId = 0;
+                ClearCollect(oportunidadesXEquipoReporteColl; 
+                            ReporteXEquipoParaAliados.Run(BaseDeDatosAUtilizar; 
+                                                Text(aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd");
+                                                usuarioEsVendedor.vendedorId)
+                );
+                ClearCollect(oportunidadesXEquipoReporteColl; 
+                            ReporteXEquipo.Run(BaseDeDatosAUtilizar; 
+                                                Text(aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd");
+                                                First(equipoComboboxRP.SelectedItems).EquipoId)
+                )     
+            )
+    )
+);;
+
+If(reportesDropdownRP.SelectedText.id = "O3";
+    If (CountRows(estatusComboboxRP.SelectedItems) = 0 Or IsBlank(estatusComboboxRP.SelectedItems);
+        Notify("Por favor indique un estatus"; NotificationType.Error; 3000);
+        If (usuarioEsVendedor.vendedorId = 0;
+            ClearCollect(oportunidadesReportesColl; 
+                        ReporteOportunidadesXEstatus.Run(First(estatusComboboxRP.SelectedItems).EstatusId; 
+                                                        Text (aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd"); 
+                                                        BaseDeDatosAUtilizar)
+            );
+            ClearCollect(oportunidadesReportesColl; 
+                        ReporteOportunidadesXEstatusVend.Run(First(estatusComboboxRP.SelectedItems).EstatusId; 
+                                                            First(usuarioActualColl).id;
+                                                            usuarioEsVendedor.vendedorId ;  
+                                                            Text (aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd"); 
+                                                            BaseDeDatosAUtilizar)
+            )
+        ) 
+    )
+);; 
+
+If(reportesDropdownRP.SelectedText.id = "O4";
+    If (CountRows(tipoProductosComboboxRP.SelectedItems) = 0 Or IsBlank(tipoProductosComboboxRP.SelectedItems);
+        Notify("Por favor indique un tipo de producto"; NotificationType.Error; 3000);
+       
+        If (usuarioEsVendedor.vendedorId = 0;
+            ClearCollect(oportunidadesReportesColl; 
+                        ROportunidadesXTipoProducto.Run(First(tipoProductosComboboxRP.SelectedItems).id; 
+                                                        Text (aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd"); 
+                                                        BaseDeDatosAUtilizar)
+            );
+            ClearCollect (oportunidadesReportesColl; 
+                        ROportunidadesXTipoProductoVend.Run(BaseDeDatosAUtilizar;
+                                                            Text (aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd"); 
+                                                            First(usuarioActualColl).id; 
+                                                            usuarioEsVendedor.vendedorId; 
+                                                            First(tipoProductosComboboxRP.SelectedItems).id)
+            )
+        )
+    )       
+);;
+
+If(reportesDropdownRP.SelectedText.id = "A1";
+    If (CountRows(clientesReportesComboboxRP.SelectedItems) = 0;
+        Notify("Por favor seleccione un cliente"; NotificationType.Error; 3000);
+        ClearCollect(accionesReportesColl; 
+                    ReporteAccionesXCliente.Run(First(clientesReportesComboboxRP.SelectedItems).codigo; 
+                                                Text (aPartirDePickerRP.SelectedDate; "[$-es-ES]yyyy/mm/dd"); 
+                                                BaseDeDatosAUtilizar)
+        );;
+        Clear(clientesReportesColl);;
+        UpdateContext({resetCampos: true; vacioMsg:true})
+    )
+);; 
+UpdateContext({ordenLoc:true; ordernarPorLoc:"ID" ;cargandoLoc: false})

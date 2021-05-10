@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[ModificarRecordatorio](@ProximaAccionId INT)
+CREATE PROC [dbo].[ModificarRecordatorio](@ProximaAccionId INT)
 AS 
 BEGIN 
 	DECLARE 

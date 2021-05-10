@@ -1,4 +1,4 @@
-CREATE PROC [dbo].[AgregarAcciones] (@accionEnCurso NVARCHAR(500), @AccionId INT, @proximaAccion NVARCHAR(500))
+CREATE PROC [dbo].[AgregarAcciones] (@accionEnCurso NVARCHAR(600), @AccionId INT, @proximaAccion NVARCHAR(600))
 as 
 begin 
    WITH JSONAccionEnCurso as(

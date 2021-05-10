@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[InsertarOportunidadDiferida] (@json NVARCHAR(500), @accionEnCurso NVARCHAR(500), @proximaAccion NVARCHAR(500), @IdOportunidadDif INT)
+CREATE PROC [dbo].[InsertarOportunidadDiferida] (@json NVARCHAR(500), @accionEnCurso NVARCHAR(500), @proximaAccion NVARCHAR(500), @IdOportunidadDif INT)
  as 
 BEGIN
   Declare @OportunidadId INT, @AnteriorAccionEnCurso INT, @AnteriorProxAccion INT, @Cont INT;

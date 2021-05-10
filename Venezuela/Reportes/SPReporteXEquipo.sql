@@ -20,7 +20,7 @@ FROM    OportunidadDeVenta O
 		LEFT OUTER JOIN UsuarioEquipo UE ON UE.UsuarioId = V.UsuarioId
 
  WHERE  
-		(O.FechaCreacion >= @Fecha OR O.FechaCierre >= @Fecha)
+		O.FechaCreacion >= @Fecha
 		AND (V.RolId = 6 OR V.RolId = 7)
 		AND (Eq.EquipoId = @EquipoId
 		OR UE.EquipoId = @EquipoId)

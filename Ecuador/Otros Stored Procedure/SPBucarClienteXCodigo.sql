@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[BuscarClienteXCodigo] (@CodigoCliente VARCHAR(10))
+CREATE PROC [dbo].[BuscarClienteXCodigo] (@CodigoCliente INT)
 AS 
 BEGIN 
 SELECT *

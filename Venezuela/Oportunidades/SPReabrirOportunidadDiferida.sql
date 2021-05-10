@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[ReabrirOportunidadDiferida] (@proximaAccion NVARCHAR(500), @OportunidadId INT)
+create PROCEDURE [dbo].[ReabrirOportunidadDiferida] (@proximaAccion NVARCHAR(500), @OportunidadId INT)
 as 
 begin 
 	Declare @AccionAnterior INT 

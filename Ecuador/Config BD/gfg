@@ -1,0 +1,17 @@
+// Si se accede a esta pantalla desde el menú entonces
+If (atrasGbl <> true;
+Concurrent(
+// Deshabilita la opción de limpiar los campos, y muestra el loader
+UpdateContext({resetCampos:false; cargandoLoc: true});
+Set(menuVisible; false)
+);;
+// Establece el orden por defecto de la tabla
+UpdateContext({ordenLoc:true; ordernarPorLoc:"Fecha Ejecución"});;
+// Consulta las acciones
+ClearCollect(misAccionesColl; ConsultarAccionesXUsuario.Run(First(usuarioActualColl).UsuarioId; BaseDeDatosAUtilizar));;
+// Si estan vacías las acciones muestra un mensaje.
+If (IsBlank(misAccionesColl) = true; 
+UpdateContext({sinAccionesLoc: true});;
+);;
+UpdateContext({cargandoLoc: false}));;
+Set (atrasGbl; false)

@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[ConsultarOportunidadesXUsuario] (@IDUsuario INT, @IDVendedor INT)
+CREATE PROC [dbo].[ConsultarOportunidadesXUsuario] (@IDUsuario INT, @IDVendedor INT)
 AS 
 BEGIN 
   SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.MontoPresupuesto, O.Objetivo, O.ObservacionDeCierre,

@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[ReporteDeOportunidadesXEstatus] (@EstatusId INT, @Fecha DATE)
+CREATE PROC [dbo].[ReporteDeOportunidadesXEstatus] (@EstatusId INT, @Fecha DATE)
 AS 
 BEGIN 
 SELECT O.OportunidadId, O.FechaCreacion, O.FechaCierre, O.Objetivo, O.ObservacionDeCierre,

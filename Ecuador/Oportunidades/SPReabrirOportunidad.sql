@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[ReabrirOportunidad] (@proximaAccion NVARCHAR(500), @OportunidadId INT)
+CREATE PROCEDURE [dbo].[ReabrirOportunidad] (@proximaAccion NVARCHAR(500), @OportunidadId INT)
 as 
 begin 
 	UPDATE OportunidadDeVenta SET Estatus = 1 WHERE OportunidadId = @OportunidadId;

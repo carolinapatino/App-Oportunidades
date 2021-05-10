@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[ReporteOportunidadesXTipoProducto] (@tipoProducto INT, @aPartirDe DATE)
+CREATE PROC [dbo].[ReporteOportunidadesXTipoProducto] (@tipoProducto INT, @aPartirDe DATE)
 AS 
 BEGIN 
  IF @TipoProducto = 1 

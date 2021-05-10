@@ -1,4 +1,4 @@
- ALTER PROC [dbo].[EnviarRecordatorios] 
+CREATE PROC [dbo].[EnviarRecordatorios] 
 as
 begin
 SELECT A.AccionId, A.FechaEjecucion, AC.NombreActividad, A.AccionAnterior, A.DatoEspecifico, A.Descripcion,A.Oportunidad, R.PróximoDíaRecordatorio, U.Nombre, U.Correo, C.NombreCliente

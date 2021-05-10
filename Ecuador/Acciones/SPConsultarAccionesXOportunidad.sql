@@ -1,4 +1,4 @@
-ALTER PROC [dbo].[consultarAccionesxOportunidad] (@OportunidadId INT)
+CREATE PROC [dbo].[consultarAccionesxOportunidad] (@OportunidadId INT)
  as 
  begin 
   SELECT A.AccionId, A.FechaEjecucion, A.AccionAnterior, A.DatoEspecifico, A.Descripcion, A.Oportunidad, A.AsignadaA, Ac.NombreActividad, A.PersonaContacto
